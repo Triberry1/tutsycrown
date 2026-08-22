@@ -1,45 +1,27 @@
+// tsconfig.json
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "Node16",
-    "lib": [
-      "ES2022"
-    ],
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "outDir": "./dist",
     "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node16",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "noEmit": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "*.ts",
-    "prisma/**/*.ts",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.test.ts"
-  ]
+  "include": ["index.ts", "api/**/*.ts", "constants/**/*.ts", "hooks/**/*.ts", "types/**/*.ts", "utils/helpers.ts", "validation/**/*.ts"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
