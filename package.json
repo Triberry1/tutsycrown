@@ -1,0 +1,51 @@
+{
+  "name": "tutsy-crown-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch app.ts --watch server.ts --watch config --watch middleware --watch modules --watch utils --watch prisma --ignore node_modules --ignore dist --ignore generated --ignore .next --exec tsx server.ts",
+    "web:dev": "next dev -p 3000",
+    "web:build": "next build",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@clerk/backend": "^3.16.10",
+    "@clerk/nextjs": "^7.8.0",
+    "@prisma/adapter-pg": "^7.9.1",
+    "axios": "^1.19.0",
+    "cloudinary": "^2.10.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.2",
+    "helmet": "^8.3.0",
+    "morgan": "^1.11.0",
+    "next": "^15.5.0",
+    "pg": "^8.23.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "socket.io": "^4.8.3",
+    "stripe": "^22.5.0",
+    "winston": "^3.19.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@prisma/client": "^7.9.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^26.2.0",
+    "nodemon": "^3.1.14",
+    "prisma": "^7.9.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.12",
+    "typescript": "^5.9.3"
+  }
+}
