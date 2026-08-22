@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 px-6 py-3 rounded-full font-medium hover:border-accent hover:text-accent transition-all;
+  }
+}

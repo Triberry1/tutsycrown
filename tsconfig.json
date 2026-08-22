@@ -3,8 +3,12 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "jsx": "react-jsx",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "preserve",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -20,8 +24,28 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["index.ts", "api/**/*.ts", "constants/**/*.ts", "hooks/**/*.ts", "types/**/*.ts", "utils/helpers.ts", "validation/**/*.ts"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+  "include": [
+    "backend/api/**/*.ts",
+    "backend/constants/**/*.ts",
+    "backend/hooks/**/*.ts",
+    "backend/index.ts",
+    "backend/types/**/*.ts",
+    "backend/utils/helpers.ts",
+    "backend/validation/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts"
+  ]
 }

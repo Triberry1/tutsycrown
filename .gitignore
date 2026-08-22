@@ -6,3 +6,4 @@ logs
 .env
 
 /generated/prisma
+/backend/generated/prisma
